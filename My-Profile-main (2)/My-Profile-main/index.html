@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nancy | Portfolio</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+  <link rel="stylesheet" href="assets/css/about.css" />
+  <link rel="stylesheet" href="assets/css/services.css" />
+  <link rel="stylesheet" href="assets/css/skills-projects.css" />
+  <link rel="stylesheet" href="assets/css/contact.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>  
+</head>
+<body>
+  <header>
+      <!-- NAVBAR -->
+    <div id="navbar"></div>     
+  </header>
+
+  <section id="home" class="hero">
+
+  <!-- SOCIAL ICONS -->
+
+  <div class="social-bar">
+  <a class="github" href="https://github.com/nancypal730" target="_blank" aria-label="GitHub">
+    <i class="fab fa-github"></i>
+  </a>
+
+  <a class="linkedin" href="https://www.linkedin.com/in/nancy-pal-9525b9374" target="_blank" aria-label="LinkedIn">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+
+  <a class="twitter" href="https://twitter.com/yourusername" target="_blank" aria-label="Twitter">
+    <i class="fab fa-x-twitter"></i>
+  </a>
+</div>
+
+  <!-- HERO CONTENT -->
+  <div class="hero-container">
+
+    <!-- LEFT IMAGE -->
+    <div class="hero-image">
+      <div class="image-ring">
+        <img src="assets/images/my-profile.png" alt="Profile">
+      </div>
+    </div>
+
+    <!-- RIGHT TEXT -->
+    <div class="hero-content">
+     
+        <h2>👋 Hi I'm Nancy Pal</h2>
+
+      <h1>
+       <span> A WEB DEVELOPER</span><br>
+      <em>Building <strong><span class="dynamic-text"></span></strong> Solutions</em>
+    </h1>
+
+
+      <p>
+       Passionate Full-Stack Web Developer experienced in designing and developing responsive, database-driven web applications using HTML, CSS, JavaScript, React.js, ASP.NET Core, C#, and SQL Server. Skilled in REST APIs, authentication, CRUD operations, database design, Git/GitHub, and responsive UI development. Dedicated to building scalable, secure, and high-performance applications while continuously enhancing my expertise in modern web development, AI integration, and software engineering best practices.
+      </p>
+
+
+      <div class="hero-buttons">
+        <a href="assets/files/nancy_resume.pdf" class="btn primary">Download  Resume</a>        
+      </div>
+    </div>
+
+  </div> 
+
+
+  <!-- ABOUT PREVIEW -->
+   <div id="about" >  </div>
+</section>
+
+  <!-- SERVICES -->
+   
+  <section id="services" class="services-section">  </section>
+    
+  <div id="service-overlay"></div>
+
+  <!-- PROJECTS -->
+<section id="skills-projects"></section>
+
+<!-- PROJECT MODAL -->
+<div id="project-modal">
+  <div class="modal-content">
+    <button class="modal-close">×</button>
+
+    <h2 id="modal-title"></h2>
+    <p id="modal-desc"></p>
+
+    <p class="modal-tech">
+      <strong>Tech Stack:</strong> <span id="modal-tech"></span>
+    </p>
+
+    <p class="modal-services">
+      <strong>Related Services:</strong> <span id="modal-services"></span>
+    </p>
+
+    
+    <div class="modal-links" id="modal-links"></div>
+
+  </div>
+</div>
+
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section"></section>
+
+  <!-- FOOTER -->
+  
+  <div id="footer"></div>  
+
+<button id="backToTop" aria-label="Back to top">
+  ↑
+</button>
+
+<!-- OFFER LETTER POPUP -->
+
+<div id="offerPopup" class="offer-popup">
+
+    <span class="close-popup" onclick="closeOffer()">
+        &times;
+    </span>
+
+    <img
+        id="popupImage"
+        src=""
+        alt="Offer Letter">
+
+</div>
+
+
+  <!-- JS -->
+   
+  <script src="assets/js/main.js"></script>
+ 
+</div>
+
+
+<!-- Connecting emailJS through html -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function () {
+    emailjs.init("RE9Kpbfs_brSOE-S0");
+  })();
+</script>
+
+
+</body>
+</html>

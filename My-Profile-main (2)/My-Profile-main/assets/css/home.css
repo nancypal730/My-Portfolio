@@ -1,0 +1,253 @@
+/* ===== HERO ===== */
+.hero {
+  background: #0e0e0e;
+  color: white;
+  padding: 120px 8% 80px;
+  position: relative;
+}
+
+/* SOCIAL BAR */
+/* .social-bar {
+  position: absolute;
+  left: 40px;
+  top: 15%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+} */
+
+/* .social-bar a {
+  width: 50px;
+  height: 50px;
+  background: #151515;
+  border-radius: 50%;
+  color: #b6ff00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+} */
+
+/* ===== VERTICAL SOCIAL BAR ===== */
+.social-bar {
+  position: fixed;
+  left: 40px;
+  top: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  z-index: 999;
+}
+
+.social-bar a {
+  width: 48px;
+  height: 48px;
+  background: #151515;
+  border-radius: 50%;
+  color: #cfcfcf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* GENERAL HOVER */
+.social-bar a:hover {
+  transform: translateX(6px);
+  color: #000;
+  background: #b6ff00;
+  box-shadow: 0 10px 25px rgba(182,255,0,0.45);
+}
+
+/* PLATFORM COLORS */
+.social-bar a.github:hover {
+  background: #ffffff;
+  color: #000;
+}
+
+.social-bar a.linkedin:hover {
+  background: #0a66c2;
+  color: #fff;
+}
+
+.social-bar a.twitter:hover {
+  background: #1da1f2;
+  color: #fff;
+}
+
+
+
+
+
+/* HERO GRID */
+.hero-container {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* IMAGE */
+.image-ring {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 4px solid rgba(182,255,0,0.4);
+  display: flex;
+  overflow:hidden;
+  align-items: center;
+  position:relative;
+  justify-content: center;
+   opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  animation: imageEnter 0.9s ease-out forwards;
+  animation-delay: 0.4s;
+}
+@keyframes imageEnter {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ===== MOBILE TAP EFFECT ===== */
+.image-ring:active {
+  transform: scale(0.97);
+  box-shadow: 0 12px 30px rgba(182, 255, 0, 0.35);
+}
+
+
+.image-ring img{
+    width:132%;
+    height:132%;
+    object-fit:cover;
+    border-radius:50%;
+    object-position:center top;
+    transform:translateY(-80px) scale(1.1);
+}
+
+/* HERO CONTENT */
+.intro {
+  color: #b6ff00;
+  font-size: 14px;
+}
+
+.hero-content h1 {
+  font-size: 54px;
+  line-height: 1.1;
+  margin: 18px 0;
+}
+
+
+.hero-content span {
+  color: #b6ff00;
+}
+
+.hero-content em {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
+
+.hero-content p {
+  max-width: 520px;
+  color: #cfcfcf;
+  margin-bottom: 28px;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+
+
+.dynamic-text {
+  color: #b6ff00;
+   border-right: 2px solid #b6ff00;
+  padding-right: 4px;
+  animation: blink 0.7s infinite; 
+}
+/* .dynamic-text {
+  display: inline-block;
+  color: #b6ff00;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.dynamic-text.fade-out {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.dynamic-text.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+} */
+
+
+
+@keyframes blink {
+  0% { border-color: transparent; }
+  50% { border-color: #b6ff00; }
+  100% { border-color: transparent; }
+}
+
+h1 strong {
+  color: #b6ff00;   /* or your accent color */
+}
+
+h1 em {
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* HOVER EFFECTS on IMAGE */
+.image-ring {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.image-ring:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(182, 255, 0, 0.25);
+}
+
+.image-ring img {
+  transition: transform 0.35s ease;
+}
+
+.image-ring:hover img {
+  transform: scale(1.05);
+}
+
+
+.image-ring::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px dashed rgba(182, 255, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-ring:hover::before {
+  opacity: 1;
+  animation: rotateRing 6s linear infinite;
+}
+
+@keyframes rotateRing {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.image-ring {
+  position: relative;
+}
